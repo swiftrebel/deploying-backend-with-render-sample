@@ -12,11 +12,11 @@ const pool = new Pool({
 });
 
 // Bored API base URL
-const BORED_API_BASE_URL = 'http://www.boredapi.com/api/activity/';
+const BORED_API_BASE_URL = 'https://cat-fact.herokuapp.com/';
 
 async function getRandomActivity() {
   try {
-    const response = await fetch(BORED_API_BASE_URL + 'activity');
+    const response = await fetch(BORED_API_BASE_URL + 'fact');
     if (response.ok) {
       const data = await response.json();
       return data.activity;
